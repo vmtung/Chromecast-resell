@@ -2434,7 +2434,7 @@ body.search-is-visible {
   display: block;
   height: 1px;
   width: 60px;
-  background-color: rgba(255, 255, 255, 0.15);
+  /* background-color: rgba(255, 255, 255, 0.15); */
   position: absolute;
   top: 50%;
 }
