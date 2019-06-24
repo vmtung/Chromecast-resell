@@ -2,25 +2,30 @@
 // function increaseCount(host) {
 //   host.count += 1;
 // }
-const genericFrameUtils = {
+const UrlOpenerUtils = {
   open(host) {
     host.displayPre = false
+    if (host.id) localStorage.setItem(host.id + "-src", host.frameSrc);
   },
   close(host) {
     host.displayPre = true
+  },
+  onSrcChange(host, event) {
+    host.frameSrc = event.target.value
   },
   refresh(host) {
     var temp = host.frameSrc
     host.frameSrc = ""
     setTimeout(() => host.frameSrc = temp, 100)
-  }
+    
+  },
 }
 
-const GenericFrame = {
+const UrlOpener = {
   displayPre: true,
   frameSrc: {
     connect: (host) => {
-      host.frameSrc = host.getAttribute('src')
+      if (host.id) host.frameSrc = localStorage.getItem(host.id + "-src")
     }
   },
   render: ({ displayPre, frameSrc, title }) => html`
@@ -28,6 +33,13 @@ const GenericFrame = {
     .full-wh {
       width: 100%;
       height: 100%;
+    }
+    .src-input {
+      width: 90%;
+      margin: 10px;
+      padding: 5px;
+      min-height: 30px;
+      font-size: 16px;
     }
     .open-btn {
       padding: 10px;
@@ -55,21 +67,22 @@ const GenericFrame = {
       ${
         displayPre ? html`
         <div class="full-wh" style="background-color: bisque; display: flex; justify-content: center; align-items: center; flex-direction: column;">
-          <h2>${title}</h2>
-          <button class="open-btn" onclick=${genericFrameUtils.open}>
+          <h2>${title || 'Url Opener'}</h2>
+          <input class="src-input" placeholder="Taskade embed URL" value=${frameSrc} oninput=${UrlOpenerUtils.onSrcChange}></input>
+          <button class="open-btn" onclick=${UrlOpenerUtils.open}>
             Start
           </button>
         </div>
       ` : html`
         <div class="frame-overlay">
-          <button class="refresh-btn" onclick=${genericFrameUtils.refresh}>
+          <button class="refresh-btn" onclick=${UrlOpenerUtils.refresh}>
             <i class="fas fa-sync-alt"></i>
           </button>
-          <button class="close-btn" onclick=${genericFrameUtils.close}>
+          <button class="close-btn" onclick=${UrlOpenerUtils.close}>
             <i class="fas fa-times"></i>
           </button>
         </div>
-        <iframe src="${frameSrc}" class="full-wh" frameborder="0" allowfullscreen style="max-width:100%"></iframe>
+        <iframe class="taskade-embed full-wh" scrolling="yes" frameborder="no" src="${frameSrc}"></iframe>
       `
       }
     `
@@ -78,4 +91,4 @@ const GenericFrame = {
     //   Count: ${count}
     // </button>
 
-define('generic-frame-plugin', GenericFrame);
+define('url-opener-plugin', UrlOpener);
