@@ -25,14 +25,32 @@
       body {
         height: 100%;
         margin: 0;
+        padding: 5px;
+        -webkit-box-sizing: border-box; 
+        -moz-box-sizing: border-box;    
+        box-sizing: border-box;   
+      }
+      .container {
+        -webkit-box-sizing: border-box; 
+        -moz-box-sizing: border-box;    
+        box-sizing: border-box;
+        padding: 5px;
       }
     </style>
   </head>
 
   <body id="top">
-    <iframe src="https://xhalr.com" width="38%" height="48%" frameborder="0" allowfullscreen style="max-width:100%"></iframe>
-    <iframe src="https://e.ggtimer.com/pomodoro" width="60%" height="48%" frameborder="0" allowfullscreen style="max-width:100%"></iframe>
-    <iframe class="taskade-embed" width="100%" height="50%" scrolling="yes" frameborder="no" src="https://www.taskade.com/e/zBRQmL5YWoQEDyyD/embed"></iframe>
+    <div class="container" style="width: 100%; height: 50%; display: flex; padding: 0;">
+      <div class="container" style="width: 40%; height: 100%;">
+        <iframe src="https://xhalr.com" width="100%" height="100%" frameborder="0" allowfullscreen style="max-width:100%"></iframe>
+      </div>
+      <div class="container" style="width: 60%; height: 100%;">
+        <iframe src="https://e.ggtimer.com/pomodoro" width="100%" height="100%" frameborder="0" allowfullscreen style="max-width:100%"></iframe>
+      </div>
+    </div>
+    <div class="container" style="width: 100%; height: 50%; display: flex;">
+      <iframe class="taskade-embed" width="100%" height="100%" scrolling="yes" frameborder="no" src="https://www.taskade.com/e/zBRQmL5YWoQEDyyD/embed"></iframe>
+    </div>
     <!-- <iframe src="https://www.taskade.com" width="900" height="600" frameborder="0" allowfullscreen style="max-width:100%"></iframe> -->
   </body>
 </html>
