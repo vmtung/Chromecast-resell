@@ -1,57 +1,196 @@
-/* Custom Stylesheet */
-/**
- * Use this file to override Materialize files so you can update
- * the core Materialize files in the future
- *
- * Made By MaterializeCSS.com
- */
-
-nav ul a,
-nav .brand-logo {
-  color: #444;
-}
-
-p {
-  line-height: 2rem;
-}
-
-.sidenav-trigger {
-  color: #26a69a;
-}
-
-.parallax-container {
-  min-height: 380px;
-  line-height: 0;
-  height: auto;
-  color: rgba(255,255,255,.9);
-}
-  .parallax-container .section {
-    width: 100%;
-  }
-
-@media only screen and (max-width : 992px) {
-  .parallax-container .section {
-    position: absolute;
-    top: 40%;
-  }
-  #index-banner .section {
-    top: 10%;
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 11pt;
   }
 }
 
-@media only screen and (max-width : 600px) {
-  #index-banner .section {
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  html {
+    font-size: 11pt;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  html {
+    font-size: 13pt;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  html {
+    font-size: 13pt;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  html {
+    font-size: 18pt;
+  }
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  line-height: 1.0;
+  word-wrap: break-word;
+  overflow-x: hidden;
+}
+
+body:before {
+    content: '';
+    display: block;
+    position: fixed;
     top: 0;
-  }
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    -moz-pointer-events: none;
+    -webkit-pointer-events: none;
+    -ms-pointer-events: none;
+    pointer-events: none;
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    background-attachment: scroll;
+    background-image: url(../images/background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #FFFFFF;
 }
 
-.icon-block {
-  padding: 0 15px;
-}
-.icon-block .material-icons {
-  font-size: inherit;
+*, *:before, *:after {
+  box-sizing: border-box;
 }
 
-footer.page-footer {
+* {
   margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+#wrapper {
+  padding: 1.5rem;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+
+#main {
+  display: flex;
+  position: relative;
+  max-width: 100%;
+  z-index: 1;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: white;
+  border-radius: 0.5rem;
+  transition: opacity 1.25s ease 0s,transform 1.25s ease 0s;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+#main > .inner {
+  padding: 3rem 2rem;
+  width: 24rem;
+}
+
+#main > .inner > * {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+#main > .inner > :first-child {
+  margin-top: 0 !important;
+}
+
+#main > .inner > :last-child {
+  margin-bottom: 0 !important;
+}
+
+#main > .inner > .full {
+  width: calc(100% + 4rem);
+  margin-left: -2rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.icons > li {
+  display: inline-block;
+  position: relative;
+  margin: 0.3rem;
+}
+
+/* Tooltip text */
+.icons > li .label {
+  visibility: hidden;
+  width: 8rem;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+  bottom: 115%;
+  left: -2.5rem;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.icons > li:hover .label {
+  visibility: visible;
+}
+
+.icons > li .label::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.icon-wrapper {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 2rem;
+  background-color: black;
+}
+
+.icon-wrapper > .icon {
+  height: 70%;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#name {
+  font-size: 300%;
+  font-weight: bold;
+  line-height: 130%;
+}
+
+#job-title {
+  font-size: 150%;
+  color: dimgray;
 }
