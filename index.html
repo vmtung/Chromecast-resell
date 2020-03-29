@@ -249,7 +249,7 @@
             -ms-transform: scale(1);
             transform: scale(1);
             background-attachment: scroll;
-            background-image: url('data:image/svg+xml;charset=utf8,%3Csvg%20viewBox%3D%220%200%20512%20512%22%20width%3D%22512%22%20height%3D%22512%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cfilter%20id%3D%22noise%22%3E%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%220.875%22%20result%3D%22noise%22%20%2F%3E%3CfeColorMatrix%20type%3D%22matrix%22%20values%3D%220%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200.23828125%200%22%20%2F%3E%3C%2Ffilter%3E%3Crect%20filter%3D%22url%28%23noise%29%22%20x%3D%220%22%20y%3D%220%22%20width%3D%22512%22%20height%3D%22512%22%20fill%3D%22transparent%22%20opacity%3D%221%22%20%2F%3E%3C%2Fsvg%3E'), linear-gradient(45deg, rgba(52, 84, 102, 0.412) 0%, rgba(17, 29, 71, 0.31) 100%), url('images/bg.jpg?v23524366545851');
+            background-image: url('data:image/svg+xml;charset=utf8,%3Csvg%20viewBox%3D%220%200%20512%20512%22%20width%3D%22512%22%20height%3D%22512%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cfilter%20id%3D%22noise%22%3E%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%220.875%22%20result%3D%22noise%22%20%2F%3E%3CfeColorMatrix%20type%3D%22matrix%22%20values%3D%220%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200.23828125%200%22%20%2F%3E%3C%2Ffilter%3E%3Crect%20filter%3D%22url%28%23noise%29%22%20x%3D%220%22%20y%3D%220%22%20width%3D%22512%22%20height%3D%22512%22%20fill%3D%22transparent%22%20opacity%3D%221%22%20%2F%3E%3C%2Fsvg%3E'), linear-gradient(45deg, rgba(52, 84, 102, 0.412) 0%, rgba(17, 29, 71, 0.31) 100%), url('images/bg.jpg?v09682717545851');
             background-size: 512px, cover, cover;
             background-position: center, 0% 0%, center;
             background-repeat: repeat, repeat, no-repeat;
@@ -345,7 +345,7 @@
             border-radius: inherit;
             padding: 2.5rem 2.5rem;
             max-width: 100%;
-            width: 24rem;
+            width: 35rem;
         }
 
         #main>.inner>header {
@@ -500,6 +500,94 @@
             -webkit-transition: none !important;
             -ms-transition: none !important;
             transition: none !important;
+        }
+
+        @-moz-keyframes deferred-spinner {
+            0% {
+                -moz-transform: rotate(0deg);
+                -webkit-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100% {
+                -moz-transform: rotate(360deg);
+                -webkit-transform: rotate(360deg);
+                -ms-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+        @-webkit-keyframes deferred-spinner {
+            0% {
+                -moz-transform: rotate(0deg);
+                -webkit-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100% {
+                -moz-transform: rotate(360deg);
+                -webkit-transform: rotate(360deg);
+                -ms-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+        @-ms-keyframes deferred-spinner {
+            0% {
+                -moz-transform: rotate(0deg);
+                -webkit-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100% {
+                -moz-transform: rotate(360deg);
+                -webkit-transform: rotate(360deg);
+                -ms-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes deferred-spinner {
+            0% {
+                -moz-transform: rotate(0deg);
+                -webkit-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100% {
+                -moz-transform: rotate(360deg);
+                -webkit-transform: rotate(360deg);
+                -ms-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+        .deferred:before {
+            content: '';
+            display: block;
+            width: 4rem;
+            height: 4rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -2rem 0 0 -2rem;
+            -moz-animation: deferred-spinner 1s infinite linear;
+            -webkit-animation: deferred-spinner 1s infinite linear;
+            -ms-animation: deferred-spinner 1s infinite linear;
+            animation: deferred-spinner 1s infinite linear;
+            transition: opacity 0.25s ease;
+            transition-delay: 0.5s;
+            opacity: 0;
+            z-index: -1;
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iOTZweCIgaGVpZ2h0PSI5NnB4IiB2aWV3Qm94PSIwIDAgOTYgOTYiIHpvb21BbmRQYW49ImRpc2FibGUiPjxzdHlsZT5jaXJjbGUge2ZpbGw6IHRyYW5zcGFyZW50OyBzdHJva2U6ICNmZmY7IHN0cm9rZS13aWR0aDogMS41cHg7IH08L3N0eWxlPjxkZWZzPjxjbGlwUGF0aCBpZD0iY29ybmVyIj48cG9seWdvbiBwb2ludHM9IjAsMCA0OCwwIDQ4LDQ4IDk2LDQ4IDk2LDk2IDAsOTYiIC8+PC9jbGlwUGF0aD48L2RlZnM+PGcgY2xpcC1wYXRoPSJ1cmwoI2Nvcm5lcikiPjxjaXJjbGUgY3g9IjQ4IiBjeT0iNDgiIHI9IjMyIi8+PC9nPjwvc3ZnPg==');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 3rem;
+        }
+
+        .deferred.loading:before {
+            opacity: 0.25;
+            z-index: 0;
         }
 
         h1 br+br,
@@ -977,7 +1065,7 @@
 
         #image03 img {
             width: 100vw;
-            height: 10rem;
+            height: 15rem;
             -moz-object-fit: cover;
             -webkit-object-fit: cover;
             -ms-object-fit: cover;
@@ -998,7 +1086,7 @@
 
         #image04 img {
             width: 100vw;
-            height: 10rem;
+            height: 15rem;
             -moz-object-fit: cover;
             -webkit-object-fit: cover;
             -ms-object-fit: cover;
@@ -1019,7 +1107,7 @@
 
         #image05 img {
             width: 100vw;
-            height: 11rem;
+            height: 15rem;
             -moz-object-fit: cover;
             -webkit-object-fit: cover;
             -ms-object-fit: cover;
@@ -1040,7 +1128,7 @@
 
         #image02 img {
             width: 100vw;
-            height: 10rem;
+            height: 15rem;
             -moz-object-fit: cover;
             -webkit-object-fit: cover;
             -ms-object-fit: cover;
@@ -3175,7 +3263,7 @@
                 margin-bottom: 0.5625rem !important;
             }
             #image03 img {
-                height: 12.5rem !important;
+                height: 18.75rem !important;
                 -moz-object-fit: cover;
                 -webkit-object-fit: cover;
                 -ms-object-fit: cover;
@@ -3192,7 +3280,7 @@
                 margin-bottom: 0.5625rem !important;
             }
             #image04 img {
-                height: 12.5rem !important;
+                height: 18.75rem !important;
                 -moz-object-fit: cover;
                 -webkit-object-fit: cover;
                 -ms-object-fit: cover;
@@ -3209,7 +3297,7 @@
                 margin-bottom: 0.5625rem !important;
             }
             #image05 img {
-                height: 13.75rem !important;
+                height: 18.75rem !important;
                 -moz-object-fit: cover;
                 -webkit-object-fit: cover;
                 -ms-object-fit: cover;
@@ -3226,7 +3314,7 @@
                 margin-bottom: 0.5625rem !important;
             }
             #image02 img {
-                height: 12.5rem !important;
+                height: 18.75rem !important;
                 -moz-object-fit: cover;
                 -webkit-object-fit: cover;
                 -ms-object-fit: cover;
@@ -3683,16 +3771,16 @@
                 height: 17.5rem !important;
             }
             #image03 img {
-                height: 10rem !important;
+                height: 15rem !important;
             }
             #image04 img {
-                height: 10rem !important;
+                height: 15rem !important;
             }
             #image05 img {
-                height: 11rem !important;
+                height: 15rem !important;
             }
             #image02 img {
-                height: 10rem !important;
+                height: 15rem !important;
             }
             #buttons01 {
                 margin-left: 0;
@@ -4166,16 +4254,16 @@
                 height: 15.3125rem !important;
             }
             #image03 img {
-                height: 8.75rem !important;
+                height: 13.125rem !important;
             }
             #image04 img {
-                height: 8.75rem !important;
+                height: 13.125rem !important;
             }
             #image05 img {
-                height: 9.625rem !important;
+                height: 13.125rem !important;
             }
             #image02 img {
-                height: 8.75rem !important;
+                height: 13.125rem !important;
             }
             #buttons01 {
                 width: 100%;
@@ -4610,11 +4698,11 @@
         <div id="main">
             <div class="inner">
                 <header id="header">
-                    <h1 id="text02">Tung Vu</h1>
+                    <h1 id="text02">Tung M. Vu</h1>
                     <p id="text01">Full Stack Developer / Dreamer</p>
                 </header>
                 <section id="home-section">
-                    <div id="image01" class="image full" data-position="center"><img src="images/image01.jpg?v23524366545851" alt="" /></div>
+                    <div id="image01" class="image full" data-position="center"><img src="images/image01.jpg?v09682717545851" alt="" /></div>
                     <ul id="buttons01" class="buttons">
                         <li><a href="#about" class="button n01">About</a></li>
                         <li><a href="#work01" class="button n02">Work</a></li>
@@ -4678,7 +4766,7 @@
                         </div>
                     </div>
                     <p id="text16"><a href="https://www.luminpdf.com/">Lumin PDF</a></p>
-                    <div id="image03" class="image full" data-position="center"><img src="images/image03.jpg?v23524366545851" alt="" /></div>
+                    <div id="image03" class="image full" data-position="center"><img src="images/image03.jpg?v09682717545851" alt="" /></div>
                     <div id="list04" class="list">
                         <ul>
                             <li>
@@ -4718,7 +4806,7 @@
                         </div>
                     </div>
                     <p id="text15"><a href="https://www.swellenergy.com/">Swell Energy Dashboard</a></p>
-                    <div id="image04" class="image full" data-position="center"><img src="images/image04.jpg?v23524366545851" alt="" /></div>
+                    <div id="image04" class="image full" data-position="center"><img src="images/image04.jpg?v09682717545851" alt="" /></div>
                     <div id="list05" class="list">
                         <ul>
                             <li>
@@ -4761,8 +4849,9 @@
                         </div>
                     </div>
                     <p id="text19"><a href="https://www.joynit.fr/en/">Joynit</a></p>
-                    <div id="image05" class="image full" data-position="center"><img src="images/image05.jpg?v23524366545851" alt="" /></div>
-                    <div id="list06" class="list">
+                    <div id="image05" class="image full" data-position="center"><span class="deferred"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjAiIHk9IjAiIHZpZXdCb3g9IjAgMCAxMDUwIDUwOSIgd2lkdGg9IjEwNTAiIGhlaWdodD0iNTA5IiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj48cmVjdCBmaWxsPSIjNzZiZGVhIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIi8%2BPC9zdmc%2B" data-src="images/image05.jpg?v09682717545851" alt="" /></span></div>
+                    <div
+                        id="list06" class="list">
                         <ul>
                             <li>
                                 <p>A social invitation management app</p>
@@ -4777,81 +4866,81 @@
                                 <p>Back-end: NodeJS, GraphQL, MongoDB, Redis</p>
                             </li>
                         </ul>
-                    </div>
-                </section>
-                <section id="work04-section">
-                    <ul id="buttons14" class="buttons">
-                        <li><a href="#home" class="button n01"><svg><use xlink:href="#icon-902"></use></svg><span class="label">Home</span></a></li>
-                    </ul>
-                    <hr id="divider07">
-                    <h2 id="text20">Work</h2>
-                    <h3 id="text21"><em>Works that I have involved in the past</em></h3>
-                    <div id="container05" class="container columns">
-                        <div class="inner">
-                            <div>
-                                <ul id="buttons15" class="buttons">
-                                    <li><a href="javascript:_previous();" class="button n01">&lt;</a></li>
-                                </ul>
-                            </div>
-                            <div>
-                                <ul id="buttons16" class="buttons">
-                                    <li><a href="javascript:_next();" class="button n01">&gt;</a></li>
-                                </ul>
-                            </div>
+            </div>
+            </section>
+            <section id="work04-section">
+                <ul id="buttons14" class="buttons">
+                    <li><a href="#home" class="button n01"><svg><use xlink:href="#icon-902"></use></svg><span class="label">Home</span></a></li>
+                </ul>
+                <hr id="divider07">
+                <h2 id="text20">Work</h2>
+                <h3 id="text21"><em>Works that I have involved in the past</em></h3>
+                <div id="container05" class="container columns">
+                    <div class="inner">
+                        <div>
+                            <ul id="buttons15" class="buttons">
+                                <li><a href="javascript:_previous();" class="button n01">&lt;</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul id="buttons16" class="buttons">
+                                <li><a href="javascript:_next();" class="button n01">&gt;</a></li>
+                            </ul>
                         </div>
                     </div>
-                    <p id="text22"><a href="https://jingo.live/">Jingo Live</a></p>
-                    <div id="image02" class="image full" data-position="center"><img src="images/image02.jpg?v23524366545851" alt="" /></div>
-                    <div id="list07" class="list">
-                        <ul>
-                            <li>
-                                <p>A live interaction game show app, similar to HQ Trivia</p>
-                            </li>
-                            <li>
-                                <p>I worked as main mobile developer and also did some work on Serverless back end</p>
-                            </li>
-                            <li>
-                                <p>Front-end: React Native</p>
-                            </li>
-                            <li>
-                                <p>Back-end: Google Firebase, NodeJS for streaming video</p>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-                <section id="work05-section">
-                    <ul id="buttons03" class="buttons">
-                        <li><a href="#home" class="button n01"><svg><use xlink:href="#icon-902"></use></svg><span class="label">Home</span></a></li>
+                </div>
+                <p id="text22"><a href="https://jingo.live/">Jingo Live</a></p>
+                <div id="image02" class="image full" data-position="center"><img src="images/image02.jpg?v09682717545851" alt="" /></div>
+                <div id="list07" class="list">
+                    <ul>
+                        <li>
+                            <p>A live interaction game show app, similar to HQ Trivia</p>
+                        </li>
+                        <li>
+                            <p>I worked as main mobile developer and also did some work on Serverless back end</p>
+                        </li>
+                        <li>
+                            <p>Front-end: React Native</p>
+                        </li>
+                        <li>
+                            <p>Back-end: Google Firebase, NodeJS for streaming video</p>
+                        </li>
                     </ul>
-                    <hr id="divider03">
-                    <h2 id="text03">Work</h2>
-                    <h3 id="text10"><em>Works that I will involve in the future</em></h3>
-                    <div id="container01" class="container columns">
-                        <div class="inner">
-                            <div class="before-spacer">
-                                <ul id="buttons07" class="buttons">
-                                    <li><a href="javascript:_previous();" class="button n01">&lt;</a></li>
-                                </ul>
-                            </div><span></span></div>
-                    </div>
-                    <p id="text12">Your Project Name Here</p>
-                    <div id="list03" class="list">
-                        <ul>
-                            <li>
-                                <p><em>This spot is reserved for your next innovative Project with me ;)</em></p>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-                <footer id="footer">
-                    <hr id="divider02">
-                    <ul id="icons01" class="icons">
-                        <li><a class="n01" href="https://twitter.com/vmtung"><svg><use xlink:href="#icon-905"></use></svg><span class="label">Twitter</span></a></li>
-                        <li><a class="n02" href="https://www.facebook.com/vmtung193"><svg><use xlink:href="#icon-95f"></use></svg><span class="label">Facebook Messenger</span></a></li>
-                        <li><a class="n03" href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;%76%6d%74%75%6e%67%39%33%40%67%6d%61%69%6c%2e%63%6f%6d"><svg><use xlink:href="#icon-90a"></use></svg><span class="label">Email</span></a></li>
+                </div>
+            </section>
+            <section id="work05-section">
+                <ul id="buttons03" class="buttons">
+                    <li><a href="#home" class="button n01"><svg><use xlink:href="#icon-902"></use></svg><span class="label">Home</span></a></li>
+                </ul>
+                <hr id="divider03">
+                <h2 id="text03">Work</h2>
+                <h3 id="text10"><em>Works that I will involve in the future</em></h3>
+                <div id="container01" class="container columns">
+                    <div class="inner">
+                        <div class="before-spacer">
+                            <ul id="buttons07" class="buttons">
+                                <li><a href="javascript:_previous();" class="button n01">&lt;</a></li>
+                            </ul>
+                        </div><span></span></div>
+                </div>
+                <p id="text12">Your Project Name Here</p>
+                <div id="list03" class="list">
+                    <ul>
+                        <li>
+                            <p><em>This spot is reserved for your next innovative Project with me ;)</em></p>
+                        </li>
                     </ul>
-                </footer>
-            </div>
+                </div>
+            </section>
+            <footer id="footer">
+                <hr id="divider02">
+                <ul id="icons01" class="icons">
+                    <li><a class="n01" href="https://twitter.com/vmtung"><svg><use xlink:href="#icon-905"></use></svg><span class="label">Twitter</span></a></li>
+                    <li><a class="n02" href="https://www.facebook.com/vmtung193"><svg><use xlink:href="#icon-95f"></use></svg><span class="label">Facebook Messenger</span></a></li>
+                    <li><a class="n03" href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;%76%6d%74%75%6e%67%39%33%40%67%6d%61%69%6c%2e%63%6f%6d"><svg><use xlink:href="#icon-90a"></use></svg><span class="label">Email</span></a></li>
+                </ul>
+            </footer>
+        </div>
         </div>
         </div>
         <script>
@@ -5371,7 +5460,7 @@
                                 }, 100);
                             } else {
                                 document.styleSheets[0].addRule('body::before', 'content: none !important;');
-                                // $body.style.backgroundImage = r.style.backgroundImage.replace('url("images/', 'url("assets/images/');
+                                $body.style.backgroundImage = r.style.backgroundImage.replace('url("images/', 'url("images/');
                                 $body.style.backgroundPosition = r.style.backgroundPosition;
                                 $body.style.backgroundRepeat = r.style.backgroundRepeat;
                                 $body.style.backgroundColor = r.style.backgroundColor;
@@ -5482,7 +5571,59 @@
                             x.style['opacity'] = '0';
                         }
                     })();
-                }
+                }(function() {
+                    var items = $$('.deferred'),
+                        f;
+                    if (!('forEach' in NodeList.prototype)) NodeList.prototype.forEach = Array.prototype.forEach;
+                    items.forEach(function(p) {
+                        var i = p.firstElementChild;
+                        p.style.backgroundImage = 'url(' + i.src + ')';
+                        p.style.backgroundSize = '100% 100%';
+                        p.style.backgroundPosition = 'top left';
+                        p.style.backgroundRepeat = 'no-repeat';
+                        i.style.opacity = 0;
+                        i.style.transition = 'opacity 0.375s ease-in-out';
+                        i.addEventListener('load', function(event) {
+                            if (i.dataset.src !== 'done') return;
+                            if (Date.now() - i._startLoad < 375) {
+                                p.classList.remove('loading');
+                                p.style.backgroundImage = 'none';
+                                i.style.transition = '';
+                                i.style.opacity = 1;
+                            } else {
+                                p.classList.remove('loading');
+                                i.style.opacity = 1;
+                                setTimeout(function() {
+                                    p.style.backgroundImage = 'none';
+                                }, 375);
+                            }
+                        });
+                    });
+                    f = function() {
+                        var height = document.documentElement.clientHeight,
+                            top = (client.os == 'ios' ? document.body.scrollTop : document.documentElement.scrollTop),
+                            bottom = top + height;
+                        items.forEach(function(p) {
+                            var i = p.firstElementChild;
+                            if (i.offsetParent === null) return true;
+                            if (i.dataset.src === 'done') return true;
+                            var x = i.getBoundingClientRect(),
+                                imageTop = top + Math.floor(x.top) - height,
+                                imageBottom = top + Math.ceil(x.bottom) + height,
+                                src;
+                            if (imageTop <= bottom && imageBottom >= top) {
+                                src = i.dataset.src;
+                                i.dataset.src = 'done';
+                                p.classList.add('loading');
+                                i._startLoad = Date.now();
+                                i.src = src;
+                            }
+                        });
+                    };
+                    on('load', f);
+                    on('resize', f);
+                    on('scroll', f);
+                })();
             })();
         </script>
         </body>
