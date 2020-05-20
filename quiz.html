@@ -107,16 +107,10 @@ function submitAndShare()
 function shareOverrideOGMeta(overrideLink, overrideTitle, overrideDescription, overrideImage)
 {
 	FB.ui({
-		method: 'share_open_graph',
-		action_type: 'og.likes',
-		action_properties: JSON.stringify({
-			object: {
-				'og:url': overrideLink,
-				'og:title': overrideTitle,
-				'og:description': overrideDescription,
-				'og:image': overrideImage
-			}
-		})
+    method: 'share',
+    href: 'https://developers.facebook.com/docs/',
+    quote: "Best game ever",
+    hashtag: '#123#124'
 	},
 	function (response) {
 	// Action after response
