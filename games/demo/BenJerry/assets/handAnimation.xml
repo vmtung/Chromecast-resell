@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="handAnimation.png">
+	<!-- Created with Adobe Flash Professional version 15.0.1.179 -->
+	<!-- http://www.adobe.com/products/flash.html -->
+	<SubTexture name="handInstruction0000" x="0" y="0" width="1138" height="332" pivotX="0" pivotY="0"/>
+	<SubTexture name="handInstruction0001" x="1138" y="0" width="332" height="332" frameX="0" frameY="0" frameWidth="1138" frameHeight="332"/>
+	<SubTexture name="handInstruction0002" x="0" y="0" width="1138" height="332"/>
+	<SubTexture name="handInstruction0003" x="1470" y="0" width="332" height="332" frameX="-806" frameY="0" frameWidth="1138" frameHeight="332"/>
+	<SubTexture name="handInstruction0004" x="0" y="0" width="1138" height="332"/>
+</TextureAtlas>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="jetRocket.png">
+	<!-- Created with Adobe Flash Professional version 15.0.1.179 -->
+	<!-- http://www.adobe.com/products/flash.html -->
+	<SubTexture name="jetPack0000" x="0" y="0" width="222" height="586" pivotX="0" pivotY="0"/>
+	<SubTexture name="jetPack0001" x="222" y="0" width="222" height="586"/>
+	<SubTexture name="jetPack0002" x="444" y="0" width="222" height="586"/>
+	<SubTexture name="jetPack0003" x="666" y="0" width="222" height="586"/>
+</TextureAtlas>

@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Ben & Jerry's Contest</title>
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/style.css?v=Friday 28th of August 2020 09:23:53 AM" />
+
+    <script src="lib/jquery.js"></script>
+
+    <script src="lib/mobile-detect.min.js"></script>
+
+    <script src="lib/phaser@2.10.min.js?v=Friday 28th of August 2020 09:23:53 AM"></script>
+
+    <!-- <script src="https://newsfeedsmartapps.s3.ap-south-1.amazonaws.com/loaderJs/loader.min.js"></script> -->
+
+    <script src="https://www.newsfeedsmartapps.com/demogames/saif/loader-demo/loader.min.js"></script>
+
+    <script src="js/all.js?v=Friday 28th of August 2020 09:23:53 AM"></script>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+        <meta property="og:url" content="https://www.newsfeedsmartapp.com/BenJerry/index.php">
+
+        <meta property="og:title" content="Ben & Jerry's Contest"> 
+
+        <meta name="author" content="Ben & Jerry">
+
+        <meta property="fb:app_id" content="1920754461332610">   
+
+        <meta property="og:description" content="Ben&Jerry's: Space Adventure">
+
+        <meta property="og:image" content="https://www.newsfeedsmartapp.com/BenJerry/Thumbnail2.jpg"> 
+
+</head>
+
+
+
+<script>
+
+    
+
+
+
+</script>
+
+
+
+<script>
+
+$(document).ready(function(){
+
+    $("#formDIv").hide();
+
+     $(".popupBG").hide(); 
+
+     $("#emailDiv").hide();
+
+});
+
+</script>
+
+
+
+
+
+
+
+<body>
+
+
+
+        <div id="formDIv">
+
+            <div class="pandorabg">
+
+                <img src="assets/Ben&Jerry_Logo.png" alt="" class="formlogo">
+
+                <p id="details">Fill in your details.</p>
+
+                <div class="form">
+
+
+
+                <div id="name-div">
+
+                    <input type="text" class="txtbox" placeholder="Name (as per NRIC)" id="name">
+
+                    <img src="assets/Icon_01.png" alt="Name_Logo" class="nameLogo">
+
+                </div> 
+
+
+
+                <div id="name-div">   
+
+                    <input type="text" class="txtbox" placeholder="Receipt Number" id="receipt" > 
+
+                    <img src="assets/Icon_02.png" alt="Receipt_Logo" class="receiptLogo">
+
+                </div>    
+
+                     <!-- <div class="tac">
+
+                         <input type="checkbox" name="checkbox" value="check" id="agree" /> <span class="txt"><u>I accept the above Terms and Conditions.</u></span>
+
+                    </div>  -->
+
+                
+
+                  <div class='pp-div'>
+
+
+
+                    <p class="product-txt">Number of Ben & Jerry's <br>products purchased</p>
+
+
+
+                     
+
+                     
+
+  <select class="productItems">
+
+    <option value="0">1-10</option>
+
+    <option value="1">1</option>
+
+    <option value="2">2</option>
+
+    <option value="3">3</option>
+
+    <option value="4">4</option>
+
+    <option value="5">5</option>
+
+    <option value="6">6</option>
+
+    <option value="7">7</option>
+
+    <option value="8">8</option>
+
+    <option value="9">9</option>
+
+    <option value="10">10</option>
+
+  </select>
+
+
+
+</div>
+
+
+
+
+
+                    <p class="err"></p>
+
+                        <img src="assets/Submit_Button.png" alt="" class="sbmit">
+
+
+
+                    <p class="details-txt">*Details will be used for verification.</p>
+
+
+
+                </div>
+
+                
+
+            </div>
+
+
+
+        </div>
+
+
+
+
+
+
+
+        <div id="emailDiv">
+
+            <div class="email-bg">
+
+                <img src="assets/Ben&Jerry_Logo.png" alt="" class="formlogo">
+
+                <p id="person-name">Congratulations!</p>
+
+                <p id="person-name2">David</p>
+
+                <p id="score-text">Your Score is</p>
+
+                <p class="user-score">0</p>
+
+                <p class="email-err">Please enter your Email to<br>submit your score.</p>
+
+                <div id="email-div">
+
+                <input type="text" class="txtbox" placeholder="Email" id="email">
+
+                <img src="assets/Icon_03.png" alt="Email_Logo" class="nameLogo">                
+
+                </div>
+
+                <p class="err"></p>
+
+                <img src="assets/Submit_Button.png" alt="" class="sbmitEmail">
+
+            </div>
+
+        </div>
+
+
+
+        <form method="post" action="" enctype="multipart/form-data" style="display:none">
+
+            <input type="file" id="file" name="file" />
+
+            <input type="button" class="button" value="Upload" id="but_upload">
+
+        </form>
+
+
+
+                <div class="popupBG" style="display:none">
+
+
+
+                    <div class="popup">
+
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+
+                                <span aria-hidden="true" style="float: right;color: darkred;opacity: 1 !important;text-shadow: none;font-size: 12vw;">&times;</span>
+
+                            </button>
+
+                            
+
+                                <div class="popup-body">
+
+                                        <h4 class="tandc">TERMS & CONDITIONS: BEN & JERRY’S SPACE ADVENTURE MOBILE CONTEST (“COMPETITION”)</h4><br>
+
+    <strong>How to Enter</strong><br>
+
+    Participants stand a chance to win a pair of return flight tickets every week through Ben & Jerry’s mobile game. Participants are required to purchase any Ben & Jerry’s product in a single receipt for an opportunity to participate in the Ben & Jerry’s ‘Space Adventure’ mobile game.<br>
+
+     <br>
+
+     <strong>Prizes</strong><br>
+
+                                        The Prizes are as follows:-
+
+
+
+<ol type="a">
+
+  <li>Week 1: 1 pair of economy class return air tickets to Maldives (on Singapore Airlines or Silk Air).</li>
+
+  <li>Week 2: 1 pair of economy class return air tickets to Japan (Haneda/ Narita) (on Singapore Airlines).</li>
+
+  <li>Week 3: 1 pair of economy class return air tickets to New Zealand (Auckland) (on Singapore Airlines).</li>
+
+  <li>Week 4: 1 pair of economy class return air tickets to Turkey (Istanbul) (on Singapore Airlines).</li>
+
+</ol>
+
+
+
+<br>
+
+<strong>How to win</strong><br>
+
+Participants are required to purchase any Ben & Jerry's product within the Entry Dates in a single receipt to qualify for participation. Participants can access Ben & Jerry's Space Adventure mobile game via QR code featured on in store POSM or game link on Ben & Jerry's Singapore Facebook page (<a href="http://bit.ly/BenJerryContest" target="_blank">http://bit.ly/BenJerryContest</a>). Participants must accurately fill out their name (as per national ID), email, number of Ben & Jerry’s products purchased in a single receipt and receipt number and are required to fly Woody the cow through space to collect as many Ben & Jerry’s pints within the given time.  Upon completion of the game, participants will have to submit their scores and attach an image of the receipt (keyed in at the start of the frame). If participants purchase more Ben & Jerry's products in a single receipt, they will get more play time (e.g. 1 product: 20 sec game, 2 products: +5 sec). Scores will be accumulated for participants who submit more entries within the same Game Week. Previous day’s scores will be announced on Ben & Jerry's Singapore Facebook page daily at 2pm and the game scores will be refreshed every Monday. There will be a new prize destination and equal chances for new participants to win every week. Receipts cannot be duplicated from previous entries.
+
+<br>
+
+<br>
+
+
+
+<strong>Entrant Requirements</strong><br>
+
+Open to all Singapore citizens, residents, work permit holders and valid Singapore passport holders who are 18 years old and above.
+
+<br>
+
+<br>
+
+
+
+<strong>Excluded Entrants</strong><br>
+
+<ul>
+
+<li>Employees of the Promoter, their advertising, fulfilment and promotion agencies, as well as affiliates, subsidiaries and immediate families.</li>
+
+</ul>
+
+<br>
+
+
+
+<strong>Entry Dates</strong><br>
+
+Opening date: 1st March 2019;
+
+Closing date: 31st March 2019;
+
+<br>
+
+<br>
+
+
+
+<strong>Notification and Claiming Prizes</strong><br>
+
+Result notification:    
+
+<ul>
+
+<li>Method – via email;</li>
+
+<li>Timing – every Monday in the month of March</li>
+
+</ul>
+
+Claiming Prizes:
+
+<ul>
+
+<li>Method – collection at the travel agency;</li>
+
+<li>Timing - 31st March 2019;</li>
+
+</ul>
+
+<br>
+
+
+
+
+
+<strong>Other Requirements</strong><br>
+
+
+
+Winners must submit the original proof of purchase, for verification, prior to collection of the Prize.
+
+Game Weeks will be as set out hereinbelow (each a “<span class="onTandCSpan">Game Week</span>”) and game scores will be refreshed at the start of each new week:
+
+
+
+<ul>
+
+<li>1st to 10th March (ends 23:59pm) - Winner will be contacted on 11th March.</li>
+
+<li>11th to 17th March (ends 23:59pm) - Winner will be contacted on 18th March.</li>
+
+<li>18th to 24th March (ends 23:59pm) - Winner will be contacted on 25th March.</li>
+
+<li>25th to 31st March (ends 23:59pm) - Winner will be contacted on 1st April.</li>
+
+<li><span class="onTandCSpan">Scores will be accumulated within the Game Week for participants who submit receipts under the same name and email registered in game.</span></li>
+
+<li>Within each Game Week, scores from the previous day will be announced daily on Ben & Jerry’s Singapore Facebook page at 2 pm so that participants can track their progress. Only the top 3 names will be announced.</li>
+
+</ul>	
+
+
+
+The terms for the Prizes are as follows:
+
+
+
+<ul>
+
+<li>Winners must collect original redemption voucher to redeem tickets.</li>
+
+<li>Flight bookings must be made minimum 30 days before departure.</li>
+
+<li>The duration for stay is minimum 3 nights and maximum 6 months for Maldives, Tokyo and Auckland and minimum 5 nights and maximum 3 months for Istanbul.</li>
+
+<li>Bookings will exclude school holidays and public holidays (Good Friday, Labour Day, Vesak Day, Hari Raya Puasa, National Day and Hari Raya Haji). </li>
+
+<li>Flight bookings are valid till August 2019, inclusive of all taxes but excludes other surcharges, insurance, baggage, meals, amenities and any other travel expenses which will have to be borne by the winner. The winner is responsible for ensuring that he or she is in possession of a valid passport and visa for travel.</li>
+
+<li>Flights to Maldives valid on SQ452, MI482, SQ451, MI481 only.</li>
+
+<li>Flights to Haneda/ Narita valid on SQ638, SQ12, SQ634, SQ 630, SQ636, SQ637, SQ11, SQ639, SQ631, SQ633, SQ635.</li>
+
+<li>Flights to Auckland valid on SQ281, SQ285, SQ282, SQ286.</li>
+
+<li>Flights to Istanbul valid on SQ392, SQ391.</li>
+
+<li>Issuance of airline tickets will be by New Shan Travel Service Pte Ltd at 20 Maxwell Rd, #01-02 Maxwell House, Singapore 069113 (“<span class="onTandCSpan">Travel Agency</span>”). Opening hours: Mon – Fri 10.00am-7.00 pm, Sat 9.00am-5.00pm, Sun- 10.00 am to 5.00 pm, Public Holidays: 10am - 5pm *Closed on Labour Day.</li>
+
+<li>All bookings are subject to availability.</li>
+
+<li>No cancellation will be allowed, once the tickets have been issued.</li>
+
+</ul>	
+
+Winners will be required to sign or acknowledge a participation/release agreement in the form required by the Promoter in order to claim the Prizes.
+
+<br>
+
+<br>
+
+
+
+<strong>Promoter</strong>
+
+<br>
+
+Unilever Singapore Pte. Limited, 20 Pasir Panjang Road, #06-22 Mapletree Business City, 117439.
+
+<br>
+
+<br>
+
+
+
+<!-- <ol>
+
+<li><strong>Competition Basis</strong><br>
+
+    <ol>
+
+    <li>By participating in the Competition you agree to the Competition Terms below (including the Privacy Notice).</li>
+
+    <li>Entrants must adhere to any third party terms, such as event organiser terms, which apply to the Competition and Prizes (these terms are available on request).</li>
+
+    <li>The Promoter reserves the right to, at any time, extend, suspend or terminate the Competition.</li>
+
+    </ol>
+
+</li>
+
+</ol> -->
+
+
+
+<strong>1.	Competition Basis</strong><br>
+
+1.1.	By participating in the Competition <span class="onTandCSpan">you agree</span> to the Competition Terms below (including the <span class="onTandCSpan">Privacy Notice</span>).<br>
+
+1.2.	Entrants must adhere to any <span class="onTandCSpan">third party terms</span>, such as event organiser terms, which apply to the Competition and Prizes (these terms are available on request).<br>
+
+1.3.	The Promoter reserves the right to, at any time, <span class="onTandCSpan">extend, suspend or terminate</span> the Competition.<br>
+
+<br>
+
+
+
+<strong>2.	Entries</strong><br>
+
+2.1.	You must follow the <span class="onTandCSpan">'How to enter'</span> instructions above (no separate additional correspondence or materials should be sent).<br>
+
+2.2.	This <span class="onTandCSpan">Competition is only open</span> to those meeting the <span class="onTandCSpan">Entrant Requirements</span> but is not open to the <span class="onTandCSpan">Excluded Entrants</span>.<br>
+
+2.3.	You <span class="onTandCSpan">may only win one prize in this Competition</span> (even where entering together with others), unless the Competition details clearly provide otherwise.<br>
+
+2.4.	Entries that (i) do not comply with these Competition Terms; or (ii) are incomplete, illegible, corrupted or late, may be <span class="onTandCSpan">rejected, disqualified, removed and/or deleted</span>.<br>
+
+<br>
+
+
+
+<strong>3.	Entry Responsibility</strong><br>
+
+3.1.	If you are <span class="onTandCSpan">submitting an entry on behalf of more than one person/party</span> (including on behalf of an organisation), you must ensure that you have authority to accept these terms on their behalf and ensure they comply with these terms.<br>
+
+3.2.	The <span class="onTandCSpan">Promoter is not responsible for</span> (i) lost entries; (ii) any other event outside the Promoter's reasonable control; or (iii) your costs of preparing or submitting an entry.<br>
+
+3.3.	You must indemnify and defend the Promoter and other members of the Unilever Group (including their respective directors, officers and employees) in respect of any <span class="onTandCSpan">third party claim</span> that your entry or its use in accordance with these Competition Terms breaches applicable laws, confidentiality or intellectual property rights.<br>
+
+3.4.	The <span class="onTandCSpan">Promoter is not and shall not be held responsible for</span> any delay, error or any other problems in the operation of the Competition caused by or arising from breakdown, technical malfunction of any telephone network or lines, computer on-line systems, servers or providers, computer equipment, software, failure of e-mail on account of technical problems and/or traffic congestion on the internet and/or at any web site or the telecommunication service or a combination thereof, including injury or damage to any participants or to any other person's computer or mobile phone related to and/or resulting from participating or downloading materials in or in connection with the Competition.<br> 
+
+3.5.	In no event will the Promoter and their respective parents, affiliates, subsidiaries and related companies, their respective advertising or promotion agencies or their respective officers, directors, employees, members, shareholders, attorneys, representatives and agents (collectively, “Affiliates”), be responsible or liable for any damages or losses of any kind, including but not limited to direct, indirect, incidental, consequential, special or punitive damages arising out of any the participant’s acceptance of the Prizes (if selected as winner), or their entry into the Competition. By entering into the Competition, participants hereby release and agree to hold harmless the Promoter and their Affiliates from and against any and all rights, demands, claims, causes of action, losses, damages, costs and expenses whatsoever that they may have, or which may arise, whether in whole or in part, and whether directly or indirectly.<br> 
+
+<br>
+
+
+
+<strong>4.	Winners</strong><br>
+
+4.1.	The <span class="onTandCSpan">results and winner(s) will be notified</span> and Prizes must be claimed using the method and within the timing set out in the Competition details.<br> 
+
+4.2.	In the event of any <span class="onTandCSpan">uncertainty or difference of opinion</span> regarding the administration of the Competition (including the award of Prizes), the decision of the Promoter is final and no correspondence with be entertained.<br> 
+
+<br>
+
+
+
+
+
+<strong>5.	Prizes</strong><br>
+
+5.1.	The Promoter's commitment is to <span class="onTandCSpan">make any Prize(s) available</span> on an <span class="onTandCSpan">'as is' basis</span> (without warranty or representation to the fullest extent permitted by applicable law). Each winner is responsible for any and all <span class="onTandCSpan">permits, consumables, tax and other matters required for</span> or relating to <span class="onTandCSpan">collection, use or enjoyment of the Prizes</span>. Prizes are limited to one Prize per participant only.<br>
+
+5.2.	The Promoter reserves the right to <span style="font-weight:bold;color:darkblue;font-size: 14px;">substitute the Prizes</span> for alternatives of equal or greater value.<br>
+
+5.3.	The Promoter may provide or publish <span style="font-weight:bold;color:darkblue;font-size: 14px;">details of the winner(s) (name and county)</span>. Winner(s) will, at the Promoter's request, participate in <span style="font-weight:bold;color:darkblue;font-size: 14px;">publicity</span> relating to this Competition. This may include winner(s) being filmed, photographed and/or interviewed by the Promoter or on its behalf.<br>
+
+<br>
+
+
+
+
+
+<strong>6.	Law</strong><br>
+
+6.1.	This Competition and these Competition Terms are <span style="font-weight:bold;color:darkblue;font-size: 14px;">governed by and will be interpreted according to the laws</span> of Singapore. Any related dispute is to be ultimately and exclusively resolved by the courts of the aforementioned country. This provision is subject to any other mandatory applicable law or mandatory right to seek resolution elsewhere.<br>
+
+6.2. This Contest is in no way sponsored, endorsed or administered by, or associated with, Facebook. The Entrant agrees that he/she is providing his/her information to the Promoter, and not to Facebook.<br>
+
+
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+                                </div>
+
+                    </div>
+
+                </div>
+
+
+
+
+
+
+
+<div class="popupBGPrivacy" style="display:none">
+
+
+
+<div class="popupPrivacy">
+
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+
+            <span aria-hidden="true" style="float: right">X</span>
+
+        </button>
+
+        
+
+            <div class="popup-body-privacy">
+
+                    <h4 class="tandcPrivacy">Privacy Notice</h4><br>
+
+                    You hereby agree that your personal data as provided by you to the Promoter for this Competition may be collected, used, disclosed and/or transferred by or between the Promoter, its affiliates and/or trusted third parties (e.g. advertising agencies, social media platforms, etc) for the purposes of administering this Competition, for consumer profiling, and/or in order to offer you tailored content for Ben & Jerry’s products and services which may be of interest to you through online advertising on social media platforms (e.g. Facebook), and in accordance with Unilever’s Privacy Policy (<a href="https://www.unileverprivacypolicy.com/en_gb/policy.aspx" target="_blank">https://www.unileverprivacypolicy.com/en_gb/policy.aspx</a>).<br>
+
+           <br>
+
+           <br>         
+
+You have the right to access, review, rectify, or cancel any personal data held by the Promoter, its affiliates and/or agencies, by sending a request to the Promoter’s Data Protection Officer at <span class="onTandCSpan">DPO.sg@unilever.com</span>.  <br>
+
+<br>
+
+<br>
+
+            </div>
+
+</div>
+
+</div>
+
+
+
+
+
+                
+
+
+
+    <script>
+
+     $("#formDIv").hide();
+
+     $(".popupBG").hide(); 
+
+     $(".popupBGPrivacy").hide();
+
+     $("#emailDiv").hide();
+
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+    <script src="js/sha.js?v=Friday 28th of August 2020 09:23:53 AM"></script>
+
+    <script src="js/sha256.js?v=Friday 28th of August 2020 09:23:53 AM"></script>
+
+    <script src="js/core.js?v=Friday 28th of August 2020 09:23:53 AM"></script>
+
+    <script src="js/enc-base64.js?v=Friday 28th of August 2020 09:23:53 AM"></script>
+
+    <script>
+
+    $(".close").click(function(){
+
+        $(".popupBG").hide();
+
+        $(".popupBGPrivacy").hide();
+
+    });
+
+    </script>
+
+
+
+    <script>
+
+$(document).on("focus", "#email", function(event){
+
+    var boxheight =  $(window).height() - 7;
+
+$(".email-bg").append("<div id='blank' style='height:"+boxheight+"px;'"+"></div>");
+
+$('html, body').animate({scrollTop: $('#email').offset().top - 200}, 500); 
+
+});
+
+</script>
+
+
+
+</body>
+
+
+
+</html>

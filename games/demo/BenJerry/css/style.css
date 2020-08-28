@@ -1,0 +1,451 @@
+body {
+    /*  position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    background-color:#FFFFFF !important;
+    display: block !important; */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    background-color: white !important;
+    display: block !important;
+}
+
+@font-face {
+    font-family: "regular";
+    src: url("../assets/OPENSANS-REGULAR.woff");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "bold";
+    src: url("../assets/OPENSANS-BOLD.woff");
+    font-style: normal;
+    font-weight: bold;
+}
+
+.onTandCSpan {
+    font-weight: bold;
+    color: darkblue;
+    font-size: 14px;
+}
+
+strong {
+    font-size: 4vw;
+    color: darkblue;
+}
+
+#rotate {
+    position: absolute;
+    display: none;
+    width: 100% !important;
+    background-color: #0b1323;
+    z-index: 1000;
+}
+
+#rotate>img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+
+canvas {
+    position: absolute;
+    /* z-index: 800 !important; */
+    background-color: transparent;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#formDIv,
+#emailDiv {
+    width: 414px;
+    height: 736px;
+    margin-top: 0px;
+    background-color: #fff;
+    position: relative;
+    margin: 0 auto;
+}
+
+#details {
+    color: white;
+    font-family: bold;
+    text-align: center;
+    top: 26%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    font-size: 3vh;
+}
+
+.pandorabg,
+.email-bg {
+    background: url('../assets/Background.jpg');
+    width: 100%;
+    min-height: 100vh;
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#formDIv .formlogo,
+#emailDiv .formlogo {
+    width: 70%;
+    margin: 0 auto;
+    display: block;
+    position: absolute;
+    top: 7%;
+    left: 0;
+    right: 0;
+}
+
+#person-name {
+    color: #27e8f7;
+    font-family: bold;
+    font-size: 2.5vw;
+    text-align: center;
+    margin-top: 40%;
+}
+
+#person-name2 {
+    color: #27e8f7;
+    font-family: bold;
+    font-size: 2.5vw;
+    text-align: center;
+}
+
+#score-text {
+    color: white;
+    text-align: center;
+    margin-top: 10%;
+    font-size: 3.5vh;
+    font-family: bold;
+}
+
+.user-score {
+    color: white;
+    text-align: center;
+    font-family: bold;
+    font-size: 5vw;
+    margin-top: -26px;
+}
+
+.email-err {
+    color: white;
+    text-align: center;
+    font-family: regular;
+    font-size: 2.5vh;
+    margin-top: 7%;
+}
+
+.pp-div {
+    width: 75%;
+    background-color: white;
+    margin: 0 auto;
+    display: block;
+}
+
+.form {
+    position: absolute;
+    width: 100%;
+    top: 32%;
+}
+
+.txtbox {
+    background-color: white;
+    margin: 0 auto;
+    display: block;
+    margin-top: 23px;
+    height: 70px;
+    width: 75%;
+    color: black;
+    font-size: 22px;
+    font-family: regular;
+    padding-left: 14px;
+}
+
+#name-div,
+#email-div {
+    position: relative;
+    width: 100%;
+}
+
+.nameLogo,
+.receiptLogo {
+    width: 9%;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+    right: 80px;
+    top: 0;
+}
+
+/*.receiptLogo
+{    
+    width: 9%;
+    float: right;
+    margin-top: -10%;
+    margin-right: 84px;
+}*/
+
+.txt {
+    font-family: regular;
+    font-size: 2vh;
+    color: red;
+    font-family: regular;
+}
+
+.product-txt {
+    font-family: regular;
+    font-size: 2vh;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    color: white;
+    margin-left: 15px;
+}
+
+.pp-div {
+    width: 75%;
+    margin: 0 auto;
+    height: 100px;
+    position: relative;
+    background: transparent;
+}
+
+select {
+    background-color: #e4a30e;
+    color: white;
+    width: 8vw;
+    height: 7vh;
+    font-family: bold;
+    font-size: 2vw;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    padding-left: 10px;
+}
+
+.drp-down {
+    background-color: #dc9b0c;
+    width: 16vw;
+    height: 35px;
+    color: white;
+}
+
+.sbmit,
+.sbmitEmail {
+    width: 50%;
+    margin: 0 auto;
+    display: block;
+    margin-top: 15%;
+    cursor: pointer;
+}
+
+.details-txt {
+    color: white;
+    text-align: center;
+    font-size: 2vh;
+    font-family: regular;
+    margin-top: 30px;
+}
+
+#bulb {
+    position: absolute;
+    width: 100%;
+}
+
+#bulbOn {
+    position: absolute;
+    width: 100%;
+}
+
+.tandc,
+.tandcPrivacy {
+    text-align: center;
+    font-size: 17px;
+    margin-top: 45px;
+}
+
+/* .submit:hover
+{
+    background: url('https://s3.ap-south-1.amazonaws.com/newsfeedsmartapps/bachatrun/mobile/assets/Submit-overlay.png');
+} */
+
+.txtbox::-webkit-input-placeholder {
+    color: #003322;
+}
+
+.txtbox::-moz-placeholder {
+    color: #003322;
+}
+
+.txtbox:-ms-input-placeholder {
+    color: #003322;
+}
+
+.txtbox:-moz-placeholder {
+    color: #003322;
+}
+
+.btn,
+.btn:hover {
+    width: 55%;
+    background-color: #003322;
+    color: #a6ce39;
+    display: block;
+    padding: 8px 12px;
+    margin: 22px auto;
+    font-family: "pacman";
+}
+
+.footerimg {
+    position: absolute !important;
+    bottom: 0;
+    width: 100% !important;
+}
+
+.err {
+    text-align: center;
+    font-family: regular;
+    position: absolute;
+    color: white;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-top: 7%;
+}
+
+.tac {
+    text-align: center;
+    margin-top: 15px;
+}
+
+span {
+    font-family: bold;
+    font-size: 4vh;
+}
+
+.popupBG,
+.popupBGPrivacy {
+    height: 100vh;
+    width: 100%;
+    background-color: #0000007d;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    overflow-y: auto;
+}
+
+.popup,
+.popupPrivacy {
+    background-color: white;
+    width: 50%;
+    margin: 3vh auto 0;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.close {
+    width: 3%;
+    margin-left: 97%;
+    opacity: 1;
+    text-shadow: none;
+}
+
+.popup-body,
+.popup-body-privacy {
+    font-size: 14px;
+    font-family: regular;
+}
+
+.formInstruction {
+    position: relative;
+    top: 200px;
+    text-align: center;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    line-height: 1;
+}
+
+.clause {
+    color: white;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    font-family: regular;
+    margin-top: 22%;
+}
+
+@media only screen and (max-width: 767px) {
+    .popup,
+    .popupPrivacy {
+        width: 90%;
+    }
+    #details {
+        top: 17%;
+    }
+    select {
+        width: 18vw;
+        font-size: 3vw;
+    }
+    #formDIv .formlogo,
+    #emailDiv .formlogo {
+        top: 3%;
+    }
+    .form {
+        top: 20%;
+    }
+    .txtbox {
+        margin-top: 25px;
+        font-size: 16px;
+    }
+    .nameLogo,
+    .receiptLogo {
+        right: 60px;
+    }
+    .close>span {
+        font-size: 5vh;
+        z-index: 100;
+        position: absolute;
+        right: 28px;
+    }
+    button.close {
+        background-color: transparent;
+    }
+    .sbmit,
+    .sbmitEmail {
+        margin-top: 16%;
+    }
+    .details-txt {
+        margin-top: 15px;
+    }
+    #person-name {
+        font-size: 5.5vw;
+        margin-top: 30%;
+    }
+    #person-name2 {
+        font-size: 5.5vw;
+    }
+    .user-score {
+        font-size: 7vw;
+        margin-top: -10px;
+    }
+}
