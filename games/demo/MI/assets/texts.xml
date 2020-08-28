@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="texts.png">
+	<!-- Created with Adobe Flash Professional version 15.0.1.179 -->
+	<!-- http://www.adobe.com/products/flash.html -->
+	<SubTexture name="text1" x="0" y="285" width="297" height="95" pivotX="0" pivotY="0" frameX="0" frameY="0" frameWidth="521" frameHeight="107"/>
+	<SubTexture name="text2" x="421" y="190" width="315" height="95" frameX="0" frameY="0" frameWidth="521" frameHeight="107"/>
+	<SubTexture name="text3" x="590" y="285" width="183" height="95" frameX="0" frameY="0" frameWidth="521" frameHeight="107"/>
+	<SubTexture name="text4" x="297" y="285" width="293" height="95" frameX="0" frameY="0" frameWidth="521" frameHeight="107"/>
+	<SubTexture name="text5" x="736" y="190" width="241" height="95" frameX="0" frameY="0" frameWidth="521" frameHeight="107"/>
+	<SubTexture name="text6" x="521" y="0" width="479" height="95" frameX="0" frameY="0" frameWidth="521" frameHeight="107"/>
+	<SubTexture name="text7" x="0" y="0" width="521" height="95" frameX="0" frameY="0" frameWidth="521" frameHeight="107"/>
+	<SubTexture name="text8" x="0" y="190" width="421" height="95" frameX="0" frameY="0" frameWidth="521" frameHeight="107"/>
+	<SubTexture name="text9" x="459" y="95" width="445" height="95" frameX="0" frameY="0" frameWidth="521" frameHeight="107"/>
+	<SubTexture name="text10" x="0" y="95" width="459" height="95" frameX="0" frameY="0" frameWidth="521" frameHeight="107"/>
+	<SubTexture name="or" x="773" y="285" width="105" height="107" frameX="0" frameY="0" frameWidth="521" frameHeight="107"/>
+</TextureAtlas>

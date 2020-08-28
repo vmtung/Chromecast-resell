@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="shortcut icon" type="image/jpeg" href="https://s3.ap-south-1.amazonaws.com/newsfeedsmartapps/BigBazaar/MountainModak2019/assets/favicon.ico"/>
+    <title>Play Mountain Modak to win Vouchers!</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://s3.ap-south-1.amazonaws.com/newsfeedsmartapps/BigBazaar/MountainModak2019/js/phaser.min.js"></script>
+<!--    <script type="text/javascript" src="https://s3.ap-south-1.amazonaws.com/newsfeedsmartapps/BigBazaar/MahaBachat/mobile/js/phaser.min.js"></script>-->
+    <script type="text/javascript">
+            var source = "Social";
+    </script>
+    <script type="text/javascript" src="https://s3.ap-south-1.amazonaws.com/newsfeedsmartapps/BigBazaar/MountainModak2019/js/all.js?v=1598603967"></script>
+    <script type="text/javascript" src="https://s3.ap-south-1.amazonaws.com/newsfeedsmartapps/BigBazaar/MountainModak2019/js/core.js?v=1598603967"></script>
+    <script type="text/javascript" src="https://s3.ap-south-1.amazonaws.com/newsfeedsmartapps/BigBazaar/MountainModak2019/js/sha.js?v=1598603967"></script>
+    <script type="text/javascript" src="https://s3.ap-south-1.amazonaws.com/newsfeedsmartapps/BigBazaar/MountainModak2019/js/sha256.js?v=1598603967"></script>
+    <script type="text/javascript" src="https://s3.ap-south-1.amazonaws.com/newsfeedsmartapps/BigBazaar/MountainModak2019/js/enc-base64.js?v=1598603967"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta property="og:url" content="https://www.newsfeedsmartapps.com/BigBazaar/MountainModak2019/index.php?utm_source=Social">
+        <meta property="og:title" content='Play Mountain Modak to win Vouchers!'>
+        <meta name="author" content="BIG BAZAAR">
+        <meta property="fb:app_id" content="1920754461332610">   
+        <meta property="og:description" content='Har Tyohaar Mein  BIG BAZAAR'>
+        <meta property="og:image" content="https://www.newsfeedsmartapps.com/BigBazaar/MountainModak2019/Thumbnail.jpg">
+    <style>
+    
+
+    @font-face {
+    font-family: helvetica;
+    src: url(https://s3.ap-south-1.amazonaws.com/newsfeedsmartapps/BigBazaar/MountainModak2019/assets/helvetica.woff);
+}
+        body{
+             background: #42284b;
+            background: -webkit-linear-gradient(top left, #020120, #b982a1);
+            background: -o-linear-gradient(top left, #020120, #b982a1);
+            background: linear-gradient(to bottom right, #020120, #b982a1);
+        }
+        #formDIv{
+           /*  background-image: url(assets/Background-2.jpg);
+            margin: auto;
+            background-size: cover;
+            color: #FFF; */
+        background-image: url(https://s3.ap-south-1.amazonaws.com/newsfeedsmartapps/BigBazaar/MountainModak2019/assets/formbg.jpg);
+	    background-size: cover;
+	    background-repeat: no-repeat;
+	    height: 100vh;
+	    width: auto;
+	    background-position: center center;
+        margin:0 auto;
+        }
+        #title{
+            width: 68%;
+            margin-top: 22vh;
+        }
+        .custom-group{
+            width: 90%;
+            margin: 20px auto;
+        }
+        .form-control{
+            height: 35px;
+            border: 2px solid #019966;
+        }
+
+        .input{
+            background-color: #ea9e3e;
+/* background-image: url(assets/formsection.png); */
+width: 68%;
+background-repeat: no-repeat;
+background-size: contain;
+height: 52px;
+border: none;
+font-family: helvetica;
+text-align: center;
+margin-top: 20px;
+color: white;
+border-radius: 10px;
+border: 2px solid #924d22;
+box-shadow: 2px 2px #924d22;
+	        }
+
+    ::placeholder {
+	  	color: white;
+	}
+    .form{
+        background: url(https://s3.ap-south-1.amazonaws.com/newsfeedsmartapps/BigBazaar/MountainModak2019/assets/Informationboard.png) no-repeat;
+        
+    background-size: contain;
+    background-position: -18px 0;
+    text-align: center;
+    position: relative;
+    top: 25%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+	}
+
+    .infoboard{
+        position: relative;
+    text-align:center;
+    top: 20%;
+    }
+
+    .infoboard img{
+        width: 75%;
+    }
+
+    .txt
+    {
+        color: white;
+        font-family: helvetica;
+        font-size: 13px;
+        float: left;
+        margin-top: 2%;
+        margin-left: 4%;
+        }
+    
+    .tickbox
+    {
+        float: left;
+        margin-left: 17%;
+    }
+
+    .chekbox
+    {
+        margin-top: 5%;
+    }
+
+    .sbmit
+    {
+        padding-top: 30%;
+    }
+
+    .sbmit img{
+        width: 60%;
+    }
+
+    .popupBG
+{
+    height: 100vh;
+    width: 100%;
+    background-color: #0000007d;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+}
+
+.popup
+{
+    background-color: white;
+    width: 50%;
+    margin: 3vh auto 0;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.close
+{
+    width: 3%;
+    margin-left: 97%;
+}
+
+.popup-body
+{
+    font-size: 14px;
+}
+
+.tandc
+{
+    text-align: center;
+    font-weight: bold;
+    font-size: 3vh;
+}
+
+.formsec{
+    padding-top: 95px;
+}
+@media only screen and (max-width: 767px) {
+    .formsec {
+    padding-top: 30px;
+}
+.popup{
+    width:90%;
+}
+.sbmit {
+    padding-top: 25%;
+}
+.txt {
+    font-size: 8px;
+
+}
+}
+@media (min-width:768px) and (max-width: 1366px) {
+    .formsec {
+        padding-top: 25px;
+    }
+    .txt {
+    font-size: 10.5px;
+
+}
+.sbmit {
+    padding-top: 30%;
+}
+}
+
+    </style>
+</head>
+<body style="margin:0px; padding:0px;">
+    <div id="formDIv" class="d-none text-center">
+    <div class='infoboard'>
+    <img src="https://s3.ap-south-1.amazonaws.com/newsfeedsmartapps/BigBazaar/MountainModak2019/assets/Form-page-text.png" alt="">
+    </div>
+        <div class="form">
+        <div class="formsec">
+                <input class="input" type="text" id="name" placeholder="NAME">
+                <input class="input" type="tel" id="mobile" placeholder="MOBILE">
+                <div class="chekbox">
+                    <img src="https://s3.ap-south-1.amazonaws.com/newsfeedsmartapps/BigBazaar/MountainModak2019/assets/Tick-mark.png" alt="" class='tickbox'><p class="txt">I ACCEPT THE ABOVE TERMS AND CONDITIONS</p>
+                </div>
+                <div class='sbmit'>
+                <img src="https://s3.ap-south-1.amazonaws.com/newsfeedsmartapps/BigBazaar/MountainModak2019/assets/Submit-button.png" alt="" class="submit">
+                <p class="err" style="color:white;"></p>
+                </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="popupBG" style="display:none">
+    <div class="popup">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" style="float: right">&times;</span>
+        </button>
+        <div class="popup-body">
+        <p class="tandc">Terms & Conditions</p><br>
+        1. This program is managed by Future Retail Limited (hereinafter referred to as “FRL”).<br>
+
+    2. The game is made for entertainment and fun purpose. .<br>
+
+    3. This game will enable user to avail shopping coupons of worth Rs 200 off on shopping of Rs 1000/-.<br>
+
+    4. The coupon is NOT VALID ON FOOD, HOME & PERSONAL CARE ITEMS. <br>
+
+    5. The coupon is valid only on below list of items:
+    <li>
+        <ul>Fashion apparels , Footwear (select items)</ul>
+        <ul>Kitchen & Dining Needs</ul>
+        <ul>Home Fashion & Décor’ </ul>
+        <ul>Luggage Toys | Sports & Stationery</ul>
+        <ul>Electronics ( Except Mobiles, Laptops  & Accessories )</ul>
+    </li>
+    <br>
+    6. User can register with a unique and valid name and mobile number.<br>
+
+7.	Details entered if not valid will not be considered and the user will not receive any coupons and rewards. Please ensure that the mobile number is not on DND, to receive the coupon through SMS<br>
+
+8.	One number will receive max 1 coupon.<br>
+
+9.	Each user will receive coupons after successfully scoring the minimum 75 points<br>
+
+10.	The eligible mobile numbers will receive the Big Bazaar shopping coupons within 48 hours of submitting the score, through an SMS. Please ensure that the mobile number is not on DND, to receive the coupon through SMS<br>
+
+11.	Any data breaching and hacking is subject to strict and legal action against the user.<br>
+
+12.	The customers can redeem the coupons at the nearest Big Bazaar & fbb only<br>
+
+13.	FRL shall not be liable in the event it fails to fulfil any of its obligations under this terms and conditions due to flood, earthquake, storm, cyclone or any other acts of god of similar nature, war, strike, lockout, or governmental or judicial or quasi-judicial policies/intervention/direction /prohibition or change in law or for any technology/network failure or any other reasons beyond its control.<br>
+
+14.	An entrant to this activity indicating his/her agreement to be bound by these terms and conditions.<br>
+      
+15.	If FRL finds out any illicit activities, fake profiles or bot users creating multiple accounts or tampering the gaming, those users will not be counted or gratified<br>
+      
+16.	In case of any dispute, the decision of FRL shall be final and binding on all concerned and Courts in Mumbai shall have exclusive Jurisdiction.<br>    
+      
+17.	FRL reserves the right to modify these Terms and Conditions and such changes shall be deemed effective immediately.<br>  
+       
+        </div>
+    </div>
+</div>
+    
+    </body>
+</html>

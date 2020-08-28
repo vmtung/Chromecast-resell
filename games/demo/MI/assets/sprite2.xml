@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="sprite2.png">
+	<!-- Created with Adobe Flash Professional version 15.0.1.179 -->
+	<!-- http://www.adobe.com/products/flash.html -->
+	<SubTexture name="unhealthy5" x="0" y="0" width="1171" height="1171" pivotX="0" pivotY="0"/>
+	<SubTexture name="unhealthy4" x="0" y="1171" width="1171" height="1171"/>
+	<SubTexture name="unhealthy3" x="0" y="2342" width="1171" height="1171"/>
+	<SubTexture name="unhealthy2" x="1171" y="0" width="1171" height="1171"/>
+	<SubTexture name="unhealthy1" x="1171" y="1171" width="1171" height="1171"/>
+	<SubTexture name="unhealthy0" x="1171" y="2342" width="1171" height="1171"/>
+	<SubTexture name="band3" x="2342" y="1013" width="1082" height="779" frameX="0" frameY="0" frameWidth="1171" frameHeight="1171"/>
+	<SubTexture name="band4" x="2342" y="0" width="1085" height="1013" frameX="0" frameY="0" frameWidth="1171" frameHeight="1171"/>
+	<SubTexture name="logo" x="2342" y="1792" width="129" height="184" frameX="0" frameY="0" frameWidth="1171" frameHeight="1171"/>
+</TextureAtlas>

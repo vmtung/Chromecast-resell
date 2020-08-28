@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="ratframe.png">
+	<!-- Created with Adobe Flash Professional version 15.0.1.179 -->
+	<!-- http://www.adobe.com/products/flash.html -->
+	<SubTexture name="ratframes0000" x="0" y="0" width="398" height="383" pivotX="0" pivotY="0"/>
+	<SubTexture name="ratframes0001" x="398" y="0" width="398" height="383"/>
+	<SubTexture name="ratframes0002" x="0" y="383" width="398" height="383"/>
+	<SubTexture name="ratframes0003" x="0" y="766" width="398" height="383"/>
+	<SubTexture name="ratframes0004" x="398" y="383" width="398" height="383"/>
+	<SubTexture name="ratframes0005" x="398" y="766" width="398" height="383"/>
+</TextureAtlas>

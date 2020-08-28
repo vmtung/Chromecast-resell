@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="buttons.png">
+	<!-- Created with Adobe Flash Professional version 15.0.1.179 -->
+	<!-- http://www.adobe.com/products/flash.html -->
+	<SubTexture name="playBtn0000" x="0" y="0" width="249" height="67" pivotX="0" pivotY="0"/>
+	<SubTexture name="playBtn0001" x="251" y="0" width="249" height="67"/>
+	<SubTexture name="playBtn0002" x="0" y="69" width="249" height="67"/>
+	<SubTexture name="replayBtn0000" x="251" y="69" width="249" height="67" pivotX="0" pivotY="0"/>
+	<SubTexture name="replayBtn0001" x="0" y="138" width="249" height="67"/>
+	<SubTexture name="replayBtn0002" x="0" y="138" width="249" height="67"/>
+	<SubTexture name="submitBtn0000" x="251" y="138" width="249" height="67" pivotX="0" pivotY="0"/>
+	<SubTexture name="submitBtn0001" x="0" y="207" width="249" height="67"/>
+	<SubTexture name="submitBtn0002" x="0" y="207" width="249" height="67"/>
+	<SubTexture name="tryBtn0000" x="251" y="207" width="249" height="68" pivotX="0" pivotY="0"/>
+	<SubTexture name="tryBtn0001" x="0" y="277" width="249" height="68"/>
+	<SubTexture name="tryBtn0002" x="0" y="277" width="249" height="68"/>
+</TextureAtlas>

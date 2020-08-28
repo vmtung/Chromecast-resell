@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="sprite1.png">
+	<!-- Created with Adobe Flash Professional version 15.0.1.179 -->
+	<!-- http://www.adobe.com/products/flash.html -->
+	<SubTexture name="img1" x="1491" y="0" width="519" height="518" pivotX="0" pivotY="0" frameX="0" frameY="0" frameWidth="898" frameHeight="1123"/>
+	<SubTexture name="img2" x="1491" y="518" width="519" height="518" frameX="0" frameY="0" frameWidth="898" frameHeight="1123"/>
+	<SubTexture name="img3" x="898" y="845" width="519" height="518" frameX="0" frameY="0" frameWidth="898" frameHeight="1123"/>
+	<SubTexture name="img4" x="1417" y="1036" width="519" height="518" frameX="0" frameY="0" frameWidth="898" frameHeight="1123"/>
+	<SubTexture name="img5" x="0" y="1123" width="519" height="518" frameX="0" frameY="0" frameWidth="898" frameHeight="1123"/>
+	<SubTexture name="img6" x="519" y="1363" width="519" height="518" frameX="0" frameY="0" frameWidth="898" frameHeight="1123"/>
+	<SubTexture name="img7" x="0" y="1641" width="519" height="518" frameX="0" frameY="0" frameWidth="898" frameHeight="1123"/>
+	<SubTexture name="img8" x="1038" y="1554" width="519" height="518" frameX="0" frameY="0" frameWidth="898" frameHeight="1123"/>
+	<SubTexture name="img9" x="519" y="1881" width="519" height="518" frameX="0" frameY="0" frameWidth="898" frameHeight="1123"/>
+	<SubTexture name="img10" x="0" y="2159" width="519" height="518" frameX="0" frameY="0" frameWidth="898" frameHeight="1123"/>
+	<SubTexture name="logo" x="1038" y="1363" width="129" height="185" frameX="0" frameY="0" frameWidth="898" frameHeight="1123"/>
+	<SubTexture name="band1" x="0" y="0" width="898" height="1123"/>
+	<SubTexture name="band2" x="898" y="0" width="593" height="845" frameX="0" frameY="0" frameWidth="898" frameHeight="1123"/>
+	<SubTexture name="question" x="1038" y="2072" width="813" height="309" frameX="0" frameY="0" frameWidth="898" frameHeight="1123"/>
+</TextureAtlas>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8" content="width=device-width,minimum-scale=1,maximum-scale=1" name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <title>Are you a #KalSePakka addict?</title>
+    <meta property="fb:app_id" content="263249457569822">
+    <meta property="og:url" content="https://www.newsfeedsmartapps.com/xiaomi/MI/index.html">
+    <meta property="og:title" content="Are you a #KalSePakka addict?">
+    <meta name="author" content="XIAOMI">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="video.other">
+    <meta property="og:image" content="https://www.newsfeedsmartapps.com/xiaomi/MI/Thumbnail.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <link href="./favicon.ico" rel="shortcut icon" type="image/x-icon">
+
+    <style>
+        canvas {
+            background-color: rgba(0, 0, 0, 0);
+            z-index: 1000;
+            position: absolute;
+            top: 0px;
+        }
+
+        body {
+            margin: 0;
+            overflow-x: hidden;
+            width: 100%;
+            min-height: 100vh;
+        }
+
+        #game-sec {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 10002;
+            background-color: rgb(236, 240, 241);
+        }
+
+        #rotate {
+            display: none;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            z-index: 1001;
+        }
+
+        #rotate>img {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            margin: auto;
+            max-width: 300px;
+        }
+
+        .waitBG>img {
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .waitBG {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ecf0f1;
+            display: none;
+            z-index: 1500;
+        }
+    </style>
+
+</head>
+
+
+
+<body>
+    <div id="game-sec">
+
+        <div class="waitBG">
+            <img src="./assets/loaderGIF.gif" />
+        </div>
+        <div id="rotate">
+            <img src="./assets/rotate.gif" />
+        </div>
+
+
+
+    </div>
+    <script src="./lib/phaserjs.min.js"></script>
+    <script src="./lib/jquery.js"></script>
+    <script src="./dist/bundle.js"></script>
+</body>
+
+
+
+</html>

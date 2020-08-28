@@ -1,0 +1,30 @@
+{"frames": {
+
+"try-again-button-rollover":
+{
+	"frame": {"x":0,"y":0,"w":606,"h":202},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":606,"h":202},
+	"sourceSize": {"w":606,"h":202},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"try-again-button":
+{
+	"frame": {"x":0,"y":202,"w":606,"h":202},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":606,"h":202},
+	"sourceSize": {"w":606,"h":202},
+	"pivot": {"x":0.5,"y":0.5}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "tryAgain.png",
+	"format": "RGBA8888",
+	"size": {"w":606,"h":404},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:bb9c4613805446d96979908eb3bbe556:c76e327eb896abfa87aa8ca0c9747154:3c3355280ca5985be62bcdbc7723a93b$"
+}
+}

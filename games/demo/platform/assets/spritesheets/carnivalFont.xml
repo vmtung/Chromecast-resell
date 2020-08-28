@@ -1,0 +1,26 @@
+<font>
+	<info face="C:\xampp\htdocs
+ewsfeedsmartapps\bigbazaar\sabsesaste\web\assets\spritesheets\carnivalFont" size="50" />
+	<common lineHeight="50" scaleW="310" scaleH="300" pages="1" />
+	<pages>
+		<page id="0" file="C:\xampp\htdocs
+ewsfeedsmartapps\bigbazaar\sabsesaste\web\assets\spritesheets\carnivalFont.png" />
+	</pages>
+	<chars count="13">
+		<char id="48" x="0" y="98" width="31" height="48" xoffset="0" yoffset="1" xadvance="36" /><!-- 0 -->
+		<char id="49" x="81" y="98" width="18" height="47" xoffset="0" yoffset="2" xadvance="23" /><!-- 1 -->
+		<char id="50" x="159" y="201" width="26" height="49" xoffset="0" yoffset="1" xadvance="31" /><!-- 2 -->
+		<char id="51" x="235" y="201" width="25" height="49" xoffset="0" yoffset="1" xadvance="30" /><!-- 3 -->
+		<char id="52" x="0" y="0" width="31" height="48" xoffset="0" yoffset="2" xadvance="36" /><!-- 4 -->
+		<char id="53" x="80" y="196" width="29" height="52" xoffset="0" yoffset="-2" xadvance="34" /><!-- 5 -->
+		<char id="54" x="81" y="0" width="28" height="48" xoffset="0" yoffset="1" xadvance="33" /><!-- 6 -->
+		<char id="55" x="159" y="99" width="27" height="52" xoffset="0" yoffset="-2" xadvance="32" /><!-- 7 -->
+		<char id="56" x="0" y="196" width="30" height="49" xoffset="0" yoffset="1" xadvance="35" /><!-- 8 -->
+		<char id="57" x="159" y="0" width="28" height="49" xoffset="0" yoffset="1" xadvance="33" /><!-- 9 -->
+		<char id="46" x="236" y="99" width="12" height="11" xoffset="0" yoffset="38" xadvance="17" /><!-- . -->
+		<char id="32" x="0" y="0" width="0" height="0" xoffset="0" yoffset="0" xadvance="20" /><!--   -->
+		<char id="9" x="0" y="0" width="0" height="0" xoffset="0" yoffset="0" xadvance="400" /><!-- 	 -->
+	</chars>
+	<kernings count="0">
+	</kernings>
+</font>

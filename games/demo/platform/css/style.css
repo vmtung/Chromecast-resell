@@ -1,0 +1,271 @@
+body {
+    /*  position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    background-color:#FFFFFF !important;
+    display: block !important; */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    background-color: white !important;
+    display: block !important;
+}
+
+@font-face {
+    font-family: "regular";
+    src: url("../assets/Carnevalee Freakshow.ttf");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "gotham";
+    src: url("../assets/Gotham-Bold.otf");
+    font-style: normal;
+    font-weight: normal;
+}
+
+#rotate {
+    position: absolute;
+    display: none;
+    width: 100% !important;
+    background-color: #0b1323;
+    z-index: 1000;
+}
+
+#rotate>img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+
+canvas {
+    position: absolute;
+    /* z-index: 800 !important; */
+    background-color: transparent;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#formDIv {
+    width: 414px;
+    height: 736px;
+    margin-top: 0px;
+    background-color: #fff;
+    position: relative;
+    margin: 0 auto;
+}
+
+.pandorabg {
+    background: url('../assets/formBg.jpg');
+    width: 100%;
+    min-height: 100vh;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#formDIv .formlogo {
+    width: 70%;
+    margin: 0 auto;
+    display: block;
+    position: absolute;
+    top: 20%;
+    left: 0;
+    right: 0;
+}
+
+.form {
+    position: absolute;
+    width: 100%;
+    top: 32%;
+}
+
+.txtbox {
+    background-color: white;
+    margin: 0 auto;
+    display: block;
+    margin-top: 30px;
+    border: 2px solid red;
+    height: 47px;
+    width: 75%;
+    text-align: center;
+    color: red;
+    font-size: 22px;
+    font-family: regular;
+}
+
+.txt {
+    font-family: regular;
+    font-size: 2vh;
+    color: red;
+    font-family: gotham;
+}
+
+.sbmit {
+    width: 46%;
+    margin: 0 auto;
+    display: block;
+    margin-top: 27%;
+    cursor: pointer;
+}
+
+#bulb {
+    position: absolute;
+    width: 100%;
+}
+
+#bulbOn {
+    position: absolute;
+    width: 100%;
+}
+
+.tandc {
+    text-align: center;
+}
+
+/* .submit:hover
+{
+    background: url('https://s3.ap-south-1.amazonaws.com/newsfeedsmartapps/bachatrun/mobile/assets/Submit-overlay.png');
+} */
+
+.txtbox::-webkit-input-placeholder {
+    color: #003322;
+}
+
+.txtbox::-moz-placeholder {
+    color: #003322;
+}
+
+.txtbox:-ms-input-placeholder {
+    color: #003322;
+}
+
+.txtbox:-moz-placeholder {
+    color: #003322;
+}
+
+.btn,
+.btn:hover {
+    width: 55%;
+    background-color: #003322;
+    color: #a6ce39;
+    display: block;
+    padding: 8px 12px;
+    margin: 22px auto;
+    font-family: "pacman";
+}
+
+.footerimg {
+    position: absolute !important;
+    bottom: 0;
+    width: 100% !important;
+}
+
+.err {
+    text-align: center;
+    font-family: regular;
+    position: absolute;
+    color: white;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-top: 10%;
+}
+
+.tac {
+    text-align: center;
+    margin-top: 15px;
+}
+
+span {
+    font-family: bold;
+    font-size: 4vh;
+}
+
+.popupBG {
+    height: 100vh;
+    width: 100%;
+    background-color: #0000007d;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    overflow-y: auto;
+}
+
+.popup {
+    background-color: white;
+    width: 50%;
+    margin: 3vh auto 0;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.close {
+    width: 3%;
+    margin-left: 97%;
+}
+
+.popup-body {
+    font-size: 14px;
+}
+
+.formInstruction {
+    position: relative;
+    top: 200px;
+    text-align: center;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    line-height: 1;
+}
+
+.clause {
+    color: white;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    font-family: regular;
+    margin-top: 22%;
+}
+
+@media only screen and (max-width: 767px) {
+    .popup {
+        width: 90%;
+    }
+    #formDIv .formlogo {
+        top: 10%;
+    }
+    .form {
+        top: 20%;
+    }
+    .txtbox {
+        margin-top: 25px;
+    }
+    .close>span {
+        font-size: 5vh;
+        z-index: 100;
+        position: absolute;
+        right: 34px;
+    }
+    button.close {
+        background-color: transparent;
+    }
+    .sbmit {
+        margin-top: 47%;
+    }
+}

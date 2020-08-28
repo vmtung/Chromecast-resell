@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="lightAnim.png">
+	<!-- Created with Adobe Flash Professional version 15.0.1.179 -->
+	<!-- http://www.adobe.com/products/flash.html -->
+	<SubTexture name="lightAnim10000" x="0" y="0" width="1248" height="238" pivotX="0" pivotY="0"/>
+	<SubTexture name="lightAnim10001" x="0" y="238" width="1248" height="238"/>
+</TextureAtlas>
