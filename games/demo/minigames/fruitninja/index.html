@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="utf-8" />
+
+    <title>Fruit Ninja HTML5</title>
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,user-scalable=no"
+    />
+    <!-- <meta name="viewport" content="user-scalable=no" /> -->
+
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      #canvas_wrapper {
+        max-width: 600px;
+        margin: 0 auto;
+        display: block;
+        position: relative;
+      }
+    </style>
+    <!-- <script src="http://webgameplay.tk/embed_core/embed.min.js?v=0.1.2"></script> -->
+  </head>
+  <body>
+    <div id="canvas_wrapper">
+      <canvas
+        class="canvas"
+        id="bottom"
+        style="display: block;"
+        width="750"
+        height="500"
+      ></canvas>
+      <canvas
+        class="canvas"
+        id="middle"
+        style="display: block;"
+        width="750"
+        height="500"
+      ></canvas>
+      <canvas
+        class="canvas"
+        id="top"
+        style="display: block;"
+        width="750"
+        height="500"
+      ></canvas>
+    </div>
+    <div id="loading" style="display: block;"></div>
+    <!-- <script>
+      window.onbeforeunload = confirmExit
+      function confirmExit() {
+        return 'You have attempted to leave this page. Are you sure?'
+      }
+    </script> -->
+    <script></script>
+    <!-- <script src="libs/preloadjs-0.6.0.min.js"></script> -->
+    <!-- <script src="libs/soundjs-0.6.0.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/PreloadJS/1.0.1/preloadjs.min.js"></script> -->
+    <!-- <script src="libs/createjs.1.0.0min.js"></script> -->
+    <script src="libs/preloadjs.1.0.1.min.js"></script>
+    <script src="libs/soundjs.1.0.0.min.js"></script>
+    
+    <script>
+
+      var asset_sounds = [
+        { id: 'throwFruit', src: 'throw-fruit.mp3' },
+        { id: 'bombExplode', src: 'bomb-explode.mp3' },
+        { id: 'splatter', src: 'splatter.mp3' }
+      ]
+      createjs.Sound.registerSounds(asset_sounds, './assets/sound/')
+
+      let is_touched = false
+      window.document.body.onclick = function() {
+        
+        if (!is_touched) {
+          createjs.Sound.play('splatter')
+          console.log('play')
+          is_touched = true
+        }
+      }
+    </script>
+
+    
+
+    <script src="libs/TweenLite.min.js"></script>
+    <script src="libs/EasePack.min.js"></script>
+    <script src="libs/spp.min.js"></script>
+    <script src="libs/utils.js"></script>
+    <script src="libs/Assets.js?v=2"></script>
+    <script src="libs/Module_fruit.js"></script>
+    <script src="libs/Module_bomb.js"></script>
+    <script src="libs/Module_collide.js"></script>
+    <script src="libs/Module_blade.js"></script>
+    
+    
+    <script src="assets/Main.js?v=1"></script>
+    
+  </body>
+</html>
